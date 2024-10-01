@@ -71,5 +71,3 @@ Este teste será gerido com base na metodologia ágil **SCRUM**, simulando o amb
 - Uso adequado de JavaScript, manipulação do DOM e boas práticas de desenvolvimento.
 - Responsividade da aplicação.
 - Proatividade na adição de melhorias ou funcionalidades adicionais.
-
-Boa sorte e estamos ansiosos para ver suas habilidades em ação!
