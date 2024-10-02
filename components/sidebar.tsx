@@ -19,7 +19,7 @@ export function Sidebar() {
       <div className='space-y-4'>
         <div className='px-3 py-2'>
           <h2 className='mb-2 px-4 text-lg font-semibold tracking-tight'>
-            Discover
+            Descobrir
           </h2>
           <div className='space-y-1'>
             <Button variant='secondary' className='w-full justify-start'>

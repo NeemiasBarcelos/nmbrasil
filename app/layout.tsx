@@ -7,8 +7,8 @@ import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClient } from '@/providers/query-provider'
 
 export const metadata: Metadata = {
-  title: 'Super App',
-  description: 'Base Next Template.',
+  title: 'NM Brasil Challenge',
+  description: 'Super App For Challenge.',
 }
 
 export default function RootLayout({

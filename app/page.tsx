@@ -3,6 +3,7 @@ import { ListenNow } from '@/components/listen-now'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { ListMusicTable } from '@/components/music-table/list-music-table'
 import { Suspense } from 'react'
+import { MobileMenu } from '@/components/mobile-menu'
 
 export default function Page() {
   return (
@@ -26,6 +27,7 @@ export default function Page() {
         </div>
         <ListenNow />
       </div>
+      <MobileMenu />
     </div>
   )
 }
