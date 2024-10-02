@@ -2,6 +2,7 @@ import { Sidebar } from '@/components/sidebar'
 import { ListenNow } from '@/components/listen-now'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { ListMusicTable } from '@/components/music-table/list-music-table'
+import { Suspense } from 'react'
 
 export default function Page() {
   return (
@@ -19,7 +20,9 @@ export default function Page() {
               <p className='font-bold'>Just Me</p>
             </div>
           </div>
-          <ListMusicTable />
+          <Suspense>
+            <ListMusicTable />
+          </Suspense>
         </div>
         <ListenNow />
       </div>
