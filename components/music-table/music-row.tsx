@@ -11,7 +11,7 @@ interface Props {
 
 export function MusicRow({ song, n }: Props) {
   return (
-    <TableRow className='border-0'>
+    <TableRow className='border-0 whitespace-nowrap'>
       <TableCell>{n + 1}</TableCell>
       <TableCell>
         <div className='flex items-center gap-4'>

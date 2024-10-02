@@ -9,7 +9,7 @@ export default function Page() {
     <div className='min-h-screen'>
       <div className='flex'>
         <Sidebar />
-        <div className='min-h-screen px-6 py-4'>
+        <div className='min-h-screen w-full px-6 py-4'>
           <div className='flex items-center gap-4'>
             <Avatar>
               <AvatarImage src='man-face.png' alt='me' />

@@ -19,6 +19,7 @@ import { FilterByGenre } from '@/components/music-table/filter-by-genre'
 import SearchBox from '@/components/music-table/search-box'
 import { MusicRow } from './music-row'
 import { SkeletonRow } from './skeleton-row'
+import { ScrollArea, ScrollBar } from '../ui/scroll-area'
 
 export function ListMusicTable() {
   const router = useRouter()
@@ -77,43 +78,46 @@ export function ListMusicTable() {
         <FilterByGenre />
         <SearchBox handleSetValueSearch={handleSetValueSearch} />
       </div>
-      <Table className='table-fixed'>
-        <TableHeader>
-          <TableRow>
-            <TableHead>#</TableHead>
-            <TableHead>Título</TableHead>
-            <TableHead>Artista</TableHead>
-            <TableHead>Genero</TableHead>
-            <TableHead>Lançamento</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {isError && (
+      <ScrollArea>
+        <Table>
+          <TableHeader>
             <TableRow>
-              <TableCell colSpan={5}>
-                Não foi possível carregar os resultados.
-                <Button variant='link' className='p-0' onClick={resetQuery}>
-                  Tentar novamente.
-                </Button>
-              </TableCell>
+              <TableHead>#</TableHead>
+              <TableHead>Título</TableHead>
+              <TableHead>Artista</TableHead>
+              <TableHead>Genero</TableHead>
+              <TableHead>Lançamento</TableHead>
             </TableRow>
-          )}
-
-          {isPending ? (
-            <SkeletonRow />
-          ) : filteredSongs && filteredSongs.length > 0 ? (
-            filteredSongs.map((song, index) => (
-              <MusicRow key={song.id} song={song} n={index} />
-            ))
-          ) : (
-            !isError && (
+          </TableHeader>
+          <TableBody>
+            {isError && (
               <TableRow>
-                <TableCell colSpan={5}>Sem resultados.</TableCell>
+                <TableCell colSpan={5}>
+                  Não foi possível carregar os resultados.
+                  <Button variant='link' className='p-0' onClick={resetQuery}>
+                    Tentar novamente.
+                  </Button>
+                </TableCell>
               </TableRow>
-            )
-          )}
-        </TableBody>
-      </Table>
+            )}
+
+            {isPending ? (
+              <SkeletonRow />
+            ) : filteredSongs && filteredSongs.length > 0 ? (
+              filteredSongs.map((song, index) => (
+                <MusicRow key={song.id} song={song} n={index} />
+              ))
+            ) : (
+              !isError && (
+                <TableRow>
+                  <TableCell colSpan={5}>Sem resultados.</TableCell>
+                </TableRow>
+              )
+            )}
+          </TableBody>
+        </Table>
+        <ScrollBar orientation='horizontal' />
+      </ScrollArea>
     </div>
   )
 }

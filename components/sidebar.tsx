@@ -15,7 +15,7 @@ const playlists: string[] = [
 
 export function Sidebar() {
   return (
-    <div className='min-w-40'>
+    <div className='hidden w-40 lg:block'>
       <div className='space-y-4'>
         <div className='px-3 py-2'>
           <h2 className='mb-2 px-4 text-lg font-semibold tracking-tight'>

@@ -3,7 +3,7 @@ import { Headphones } from 'lucide-react'
 
 export function ListenNow() {
   return (
-    <div className='w-fit p-4 space-y-4'>
+    <div className='hidden w-fit p-4 space-y-4 lg:block'>
       <h2 className='text-2xl font-bold tracking-tight flex items-center gap-1'>
         <Headphones size={20} strokeWidth={2} />
         Agora
